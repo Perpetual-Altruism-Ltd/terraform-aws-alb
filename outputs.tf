@@ -65,7 +65,7 @@ output "target_group_attachments" {
   }
 }
   
-output "listener_ports" {
+output "listener_port" {
   description = "Ports of the listeners"
   value = aws_lb_listener.frontend_http_tcp.port
 }
