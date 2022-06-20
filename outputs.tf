@@ -64,3 +64,10 @@ output "target_group_attachments" {
     for k, v in aws_lb_target_group_attachment.this : k => v.id
   }
 }
+  
+output "listener_ports" {
+  description = "Ports of the listeners"
+  value = {
+    for k, v in aws_lb_listener.this : k => v.port
+  }
+}
